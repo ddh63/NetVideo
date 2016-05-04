@@ -14,8 +14,8 @@ all : $(EXE) test
 
 # VideoStore
 .PHONY : run
-run : VideoStore
-	@./VideoStore
+run : NetVideo
+	@./NetVideo
 
 NetVideo : $(OBJS)
 	$(GCC) $^ -o $@
