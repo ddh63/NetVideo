@@ -12,5 +12,8 @@ int main() {
 
     // TODO:  Add test cases
 
+	Video v = new Video("Captain America", Video::NEW_RELEASE);
+    Rental r = new Rental(v, 5);
+
     return 0;
 }
