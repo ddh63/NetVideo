@@ -32,7 +32,7 @@ void Customer::addRental(const Rental& rental) {
 // calculates amount for a rental
 double Customer::amountFor(const Rental& r) const {
 
-    double thisAmount = 0;
+    double rentalAmount = 0;
     switch(r.getVideo().getCode()) {
 
         case Video::REGULAR:
@@ -52,7 +52,7 @@ double Customer::amountFor(const Rental& r) const {
         break;
     }
 
-    return thisAmount;
+    return rentalAmount;
 }
 
 // customer rental statement
@@ -82,7 +82,7 @@ std::string Customer::statement() const {
         result += "\t";
 
         // amount of rental
-        double thisAmount = amountFor(*it);
+        double rentalAmount = amountFor(*it);
         std::ostringstream out_str_stream;
         out_str_stream << thisAmount;
         result += out_str_stream.str();
